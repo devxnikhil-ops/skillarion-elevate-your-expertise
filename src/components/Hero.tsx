@@ -1,0 +1,105 @@
+import { motion } from "framer-motion";
+import { ArrowRight, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-workshop.jpg";
+
+const Hero = () => {
+  return (
+    <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Students in technical workshop"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
+      </div>
+
+      {/* Content */}
+      <div className="container relative z-10 py-20">
+        <div className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6"
+          >
+            <span className="inline-block px-4 py-2 bg-secondary/20 border border-secondary/40 rounded-full text-secondary text-sm font-medium">
+              🎓 AICTE Compliant Programs
+            </span>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6"
+          >
+            Bridging the Gap Between{" "}
+            <span className="text-secondary">Academia</span> &{" "}
+            <span className="text-secondary">Industry</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl"
+          >
+            Revolutionizing skill development for engineering and polytechnic students 
+            with hands-on technical workshops, internships, and industry-aligned training programs.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <Button
+              size="lg"
+              className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold text-base px-8 py-6"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white/40 bg-white/10 text-white hover:bg-white/20 hover:border-white/60 text-base px-8 py-6 backdrop-blur-sm"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Explore Programs
+            </Button>
+          </motion.div>
+
+          {/* Stats Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10"
+          >
+            {[
+              { value: "120+", label: "Industry Partners" },
+              { value: "75%+", label: "Placement Rate" },
+              { value: "₹19k", label: "Max Stipend" },
+              { value: "2025", label: "Established" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center md:text-left">
+                <p className="text-3xl md:text-4xl font-display font-bold text-secondary">{stat.value}</p>
+                <p className="text-white/70 text-sm mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Decorative Element */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+    </section>
+  );
+};
+
+export default Hero;
