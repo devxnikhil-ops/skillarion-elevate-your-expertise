@@ -19,16 +19,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 py-20">
         <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <span className="inline-block px-4 py-2 bg-secondary/20 border border-secondary/40 rounded-full text-secondary text-sm font-medium">
-              🎓 AICTE Compliant Programs
-            </span>
-          </motion.div>
+          
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -37,8 +28,8 @@ const Hero = () => {
             className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6"
           >
             Bridging the Gap Between{" "}
-            <span className="text-secondary">Academia</span> &{" "}
-            <span className="text-secondary">Industry</span>
+            <span className="text-white">Academia</span> &{" "}
+            <span className="text-white">Industry</span>
           </motion.h1>
 
           <motion.p

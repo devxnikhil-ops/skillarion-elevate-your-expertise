@@ -2,68 +2,58 @@ import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Partners", href: "#partners" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Partners", href: "/partners" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-primary text-primary-foreground py-2 text-sm hidden md:block">
-        <div className="container flex justify-between items-center">
-          <div className="flex items-center gap-6">
-            <a href="tel:+919492270525" className="flex items-center gap-2 hover:text-secondary transition-colors">
-              <Phone size={14} />
-              +91 9492270525
-            </a>
-            <a href="mailto:info@skillariondevelopment.in" className="flex items-center gap-2 hover:text-secondary transition-colors">
-              <Mail size={14} />
-              info@skillariondevelopment.in
-            </a>
-          </div>
-          <p className="text-secondary font-medium">Enhance Your Expertise</p>
-        </div>
-      </div>
 
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-soft">
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-secondary font-display font-bold text-xl md:text-2xl">S</span>
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden">
+                <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">SkillArion</span>
                 <span className="text-xs text-muted-foreground hidden sm:block">Development Pvt. Ltd.</span>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-foreground font-medium gold-underline hover:text-primary transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button variant="default" size="lg" className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold"
+                onClick={() => navigate('/contact')}
+              >
                 Contact Us
               </Button>
             </div>
@@ -90,16 +80,23 @@ const Header = () => {
             >
               <nav className="container py-4 flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.href}
                     className="text-foreground font-medium py-2 hover:text-secondary transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 ))}
-                <Button variant="default" className="bg-secondary text-secondary-foreground hover:bg-gold-dark mt-2 w-full">
+                <Button 
+                  variant="default" 
+                  className="bg-secondary text-secondary-foreground hover:bg-gold-dark mt-2 w-full"
+                  onClick={() => {
+                    navigate('/contact');
+                    setIsOpen(false);
+                  }}
+                >
                   Contact Us
                 </Button>
               </nav>
