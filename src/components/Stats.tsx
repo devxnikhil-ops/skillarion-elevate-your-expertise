@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 const stats = [
   { value: "120+", label: "Industry Partners", description: "Global companies collaborating with us" },
+  { value: "500+", label: "Students Placed", description: "Total Students Placed" },
   { value: "75%+", label: "Placement Rate", description: "Students placed in top companies" },
   { value: "₹19k", label: "Maximum Stipend", description: "Paid during internship programs" },
   { value: "16-24", label: "Weeks Training", description: "Comprehensive industrial exposure" },

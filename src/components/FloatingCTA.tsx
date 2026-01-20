@@ -10,7 +10,7 @@ const FloatingCTA = () => {
       className="floating-cta hidden md:flex"
     >
       <a
-        href="#contact"
+        href="/contact"
         className="floating-cta-btn bg-secondary hover:bg-gold-dark"
       >
         <span className="flex items-center gap-2">

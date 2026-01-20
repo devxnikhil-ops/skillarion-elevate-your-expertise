@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-white block leading-tight">SkillArion</span>
-                <span className="text-xs text-white/60">Development Pvt. Ltd.</span>
+                <span className="text-xs text-white/60">Development</span>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -36,27 +36,27 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                <Link onClick={scrollToTop} to="/" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                <Link onClick={scrollToTop} to="/about" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                <Link onClick={scrollToTop} to="/services" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/partners" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                <Link onClick={scrollToTop} to="/partners" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   Partners
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                <Link onClick={scrollToTop} to="/contact" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   Contact
                 </Link>
               </li>
@@ -76,6 +76,7 @@ const Footer = () => {
               ].map((program) => (
                 <li key={program}>
                   <Link
+                    onClick={scrollToTop}
                     to="/services"
                     className="text-white/70 hover:text-secondary transition-colors text-sm"
                   >

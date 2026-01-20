@@ -70,10 +70,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10"
+            className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10"
           >
             {[
               { value: "120+", label: "Industry Partners" },
+              { value: "500+", label: "Students Placed" },
               { value: "75%+", label: "Placement Rate" },
               { value: "₹19k", label: "Max Stipend" },
               { value: "2025", label: "Established" },

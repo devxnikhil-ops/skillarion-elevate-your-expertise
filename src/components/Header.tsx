@@ -29,7 +29,7 @@ const Header = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">SkillArion</span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Development Pvt. Ltd.</span>
+                <span className="text-xs text-muted-foreground hidden sm:block">Development</span>
               </div>
             </Link>
 
