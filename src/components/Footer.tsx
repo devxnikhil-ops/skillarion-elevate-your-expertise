@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Linkedin, Instagram, ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,8 +14,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="font-display font-bold text-2xl text-primary">S</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-white block leading-tight">SkillArion</span>
@@ -34,16 +35,31 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Partners", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(" ", "")}`}
-                    className="text-white/70 hover:text-secondary transition-colors text-sm"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -59,12 +75,12 @@ const Footer = () => {
                 "Expert Sessions",
               ].map((program) => (
                 <li key={program}>
-                  <a
-                    href="#services"
+                  <Link
+                    to="/services"
                     className="text-white/70 hover:text-secondary transition-colors text-sm"
                   >
                     {program}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
