@@ -45,16 +45,17 @@ const Partners = () => {
             students with real-world exposure and career opportunities.
           </p>
         </motion.div>
+        
 
         {/* Partner Categories */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {partnerCategories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="text-center p-8 rounded-2xl bg-gradient-to-br from-muted/50 to-muted border border-border hover:shadow-medium transition-all duration-300"
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+              className="stat-card group text-center p-8 rounded-2xl bg-gradient-to-br from-muted/50 to-muted/10 border border-border hover:shadow-medium transition-all duration-300"
             >
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <category.icon className="h-8 w-8 text-secondary" />

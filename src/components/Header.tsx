@@ -44,10 +44,8 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-            </nav>
-
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+              {/* CTA Button */}
+              <div className="hidden lg:block">
               <Button 
                 variant="default" 
                 size="lg" 
@@ -57,6 +55,7 @@ const Header = () => {
                 Contact Us
               </Button>
             </div>
+            </nav>            
 
             {/* Mobile Menu Toggle */}
             <button

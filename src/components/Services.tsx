@@ -132,14 +132,6 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-
-              <Button 
-                variant="ghost" 
-                className="group/btn text-primary hover:text-secondary hover:bg-transparent p-0"
-              >
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-              </Button>
             </motion.div>
           ))}
         </div>
