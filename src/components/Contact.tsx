@@ -13,9 +13,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,19 +26,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+    if (formRef.current) {
+      emailjs.sendForm(
+        'YOUR_SERVICE_ID',      // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
+        formRef.current,
+        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS public key
+      )
+      .then(() => {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        formRef.current?.reset();
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        toast({
+          title: "Failed to send",
+          description: "Please try again or contact us directly.",
+          variant: "destructive",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
     <section id="contact" className="py-20 md:py-28 bg-muted/30" ref={ref}>
       <div className="container">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="w-1 h-8 bg-secondary rounded-full"></div>
+          <h2 className="text-2xl font-bold text-primary">Contact</h2>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -144,7 +168,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 shadow-soft border border-border">
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 shadow-soft border border-border">
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
@@ -152,6 +176,7 @@ const Contact = () => {
                   </label>
                   <Input
                     type="text"
+                    name="from_name"
                     placeholder="Your name"
                     required
                     className="bg-muted/50 border-border focus:border-secondary"
@@ -163,6 +188,7 @@ const Contact = () => {
                   </label>
                   <Input
                     type="email"
+                    name="from_email"
                     placeholder="your@email.com"
                     required
                     className="bg-muted/50 border-border focus:border-secondary"
@@ -177,6 +203,7 @@ const Contact = () => {
                   </label>
                   <Input
                     type="tel"
+                    name="phone"
                     placeholder="+91 XXXXX XXXXX"
                     className="bg-muted/50 border-border focus:border-secondary"
                   />
@@ -187,6 +214,7 @@ const Contact = () => {
                   </label>
                   <Input
                     type="text"
+                    name="institution"
                     placeholder="Your institution"
                     className="bg-muted/50 border-border focus:border-secondary"
                   />
@@ -198,6 +226,7 @@ const Contact = () => {
                   Message *
                 </label>
                 <Textarea
+                  name="message"
                   placeholder="How can we help you?"
                   rows={5}
                   required

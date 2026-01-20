@@ -78,6 +78,10 @@ const Services = () => {
   return (
     <section id="services" className="py-20 md:py-28" ref={ref}>
       <div className="container">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="w-1 h-8 bg-secondary rounded-full"></div>
+          <h2 className="text-2xl font-bold text-primary">Services</h2>
+        </div>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
