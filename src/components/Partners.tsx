@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Building2, Handshake, Globe } from "lucide-react";
+import kodryxLogo from "@/assets/images.jpg";
 
 const partnerCategories = [
   {
@@ -28,10 +29,47 @@ const Partners = () => {
   return (
     <section id="partners" className="py-20 md:py-28" ref={ref}>
       <div className="container">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="w-1 h-8 bg-secondary rounded-full"></div>
+          <h2 className="text-2xl font-bold text-primary">Partners</h2>
+        </div>
+        {/* Technical Partner - Kodryx AI */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-r from-primary/5 via-secondary/10 to-primary/5 rounded-2xl p-8 md:p-12 border border-secondary/20">
+            <div className="flex flex-col items-center gap-6 text-center">
+              <span className="inline-block px-3 py-1 bg-secondary/20 text-secondary rounded-full text-xs font-medium">
+                Technical Partner
+              </span>
+              <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-2xl shadow-medium flex items-center justify-center p-4">
+                <img 
+                  src={kodryxLogo} 
+                  alt="Kodryx AI" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-primary mb-3">
+                  Kodryx AI
+                </h3>
+                <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                  Our strategic technical partner powering cutting-edge AI and technology solutions. 
+                  Kodryx AI brings expertise in artificial intelligence, machine learning, and 
+                  advanced software development to enhance our training programs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4">
@@ -45,7 +83,6 @@ const Partners = () => {
             students with real-world exposure and career opportunities.
           </p>
         </motion.div>
-        
 
         {/* Partner Categories */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">

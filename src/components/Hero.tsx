@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-workshop.jpg";
+import { Link } from "react-router-dom";
+import heroVideo from "@/assets/Education.mp4";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden">
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Students in technical workshop"
-          className="w-full h-full object-cover"
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          playsInline
+          className="w-full h-full object-cover scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/60" />
       </div>
 
       {/* Content */}
@@ -51,17 +54,23 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold text-base px-8 py-6"
+              asChild
             >
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <Link to="/contact">
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-white/40 bg-white/10 text-white hover:bg-white/20 hover:border-white/60 text-base px-8 py-6 backdrop-blur-sm"
+              asChild
             >
-              <Play className="mr-2 h-5 w-5" />
-              Explore Programs
+              <Link to="/services">
+                <Play className="mr-2 h-5 w-5" />
+                Explore Programs
+              </Link>
             </Button>
           </motion.div>
 
@@ -76,7 +85,7 @@ const Hero = () => {
               { value: "120+", label: "Industry Partners" },
               { value: "500+", label: "Students Placed" },
               { value: "75%+", label: "Placement Rate" },
-              { value: "₹19k", label: "Max Stipend" },
+              { value: "₹25K+", label: "Internship Stipend" },
               { value: "2025", label: "Established" },
             ].map((stat, index) => (
               <div key={index} className="text-center md:text-left">
@@ -89,7 +98,7 @@ const Hero = () => {
       </div>
 
       {/* Decorative Element */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
