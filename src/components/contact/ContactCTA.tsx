@@ -69,7 +69,7 @@ const ContactCTA = () => {
               </p>
               <Button
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50"
               >
                 {audience.cta}
                 <ArrowRight className="ml-2 h-4 w-4" />
