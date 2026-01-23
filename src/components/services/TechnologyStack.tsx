@@ -1,26 +1,52 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { 
-  Brain, 
-  Cpu, 
-  Cloud, 
+import {
+  Brain,
+  Cpu,
+  Cloud,
   Database,
   Code2,
   Smartphone,
   Shield,
-  Workflow
+  Workflow,
+  Microchip,
+  Radio,
+  Zap,
+  BatteryCharging,
+  Cog,
+  Wrench,
+  Building2,
+  Map,
 } from "lucide-react";
 
 const technologies = [
+  // CSE / IT
   { icon: Brain, name: "AI & ML", description: "TensorFlow, PyTorch, Scikit-learn" },
-  { icon: Cpu, name: "IoT & Robotics", description: "Arduino, Raspberry Pi, ROS" },
   { icon: Cloud, name: "Cloud Computing", description: "AWS, Azure, GCP" },
-  { icon: Database, name: "Data Science", description: "Python, R, SQL, Tableau" },
+  { icon: Workflow, name: "DevOps", description: "Docker, Kubernetes, CI/CD" },
+  { icon: Shield, name: "Cybersecurity", description: "Ethical Hacking, SIEM, SOC" },
+
+  // Data & Development
+  { icon: Database, name: "Data Science", description: "Python, SQL, Tableau, Power BI" },
   { icon: Code2, name: "Web Development", description: "React, Node.js, Django" },
   { icon: Smartphone, name: "Mobile Apps", description: "Flutter, React Native" },
-  { icon: Shield, name: "Cybersecurity", description: "Ethical Hacking, SIEM" },
-  { icon: Workflow, name: "DevOps", description: "Docker, Kubernetes, CI/CD" },
+
+  // ECE
+  { icon: Microchip, name: "VLSI & Chip Design", description: "RTL, Verilog, FPGA basics" },
+  { icon: Radio, name: "Embedded Systems & IoT", description: "Arduino, ESP32, Sensors" },
+
+  // EEE
+  { icon: Zap, name: "Smart Grid & Power Systems", description: "Renewables, Grid tech, Protection" },
+  { icon: BatteryCharging, name: "EV & Battery Tech", description: "BMS, Charging, EV architecture" },
+
+  // Mechanical
+  { icon: Cog, name: "Robotics & Automation", description: "Industry 4.0, PLC basics, Robotics" },
+  { icon: Wrench, name: "CAD / CAE & Simulation", description: "Design, Analysis, Manufacturing" },
+
+  // Civil
+  { icon: Building2, name: "BIM & Smart Construction", description: "Planning, Modeling, Execution" },
+  { icon: Map, name: "Smart Cities & Infrastructure", description: "Sustainability, Urban Tech, GIS" },
 ];
 
 const TechnologyStack = () => {
@@ -40,10 +66,14 @@ const TechnologyStack = () => {
             Technologies We Teach
           </span>
           <h2 className="section-heading">
-            Industry-Leading <span className="text-secondary">Tech Stack</span>
+            Branch-Wise <span className="text-secondary">Technology Stack</span>
           </h2>
           <p className="section-subheading mx-auto mt-4">
-            Master the technologies that top companies are actively hiring for.
+            Learn future-ready technologies designed for{" "}
+            <span className="text-primary font-medium">
+              CSE, ECE, EEE, Mechanical, and Civil
+            </span>{" "}
+            careers.
           </p>
         </motion.div>
 

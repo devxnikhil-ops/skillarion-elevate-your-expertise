@@ -12,7 +12,7 @@ const milestones = [
   {
     year: "Q1 2025",
     title: "First Partnerships",
-    description: "Signed MoUs with 50+ industry partners and educational institutions.",
+    description: "Signed MoUs with 97+ industry partners and educational institutions.",
   },
   {
     year: "Q2 2025",
@@ -22,7 +22,7 @@ const milestones = [
   {
     year: "Present",
     title: "Growing Impact",
-    description: "120+ partners, 500+ students placed, and expanding nationwide.",
+    description: "120+ partners, 584+ students placed, and expanding nationwide.",
   },
 ];
 
@@ -43,7 +43,7 @@ const OurStory = () => {
             Our Journey
           </span>
           <h2 className="section-heading">
-            The <span className="text-secondary">SkillArion</span> Story
+            The Skill<span className="text-secondary">A</span>rion Story
           </h2>
           <p className="section-subheading mx-auto mt-4">
             From a vision to revolutionize skill development to becoming a trusted 

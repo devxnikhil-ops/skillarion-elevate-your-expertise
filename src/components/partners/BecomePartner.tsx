@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Building2, GraduationCap, Phone, Mail } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const BecomePartner = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-navy-light relative overflow-hidden" ref={ref}>
@@ -55,6 +60,10 @@ const BecomePartner = () => {
             </p>
             <Button
               className="bg-secondary text-secondary-foreground hover:bg-gold-dark"
+              onClick={() => {
+                navigate('/contact');
+                scrollToTop();
+              }}
             >
               Partner as Institution
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -79,6 +88,10 @@ const BecomePartner = () => {
             </p>
             <Button
               className="bg-secondary text-secondary-foreground hover:bg-gold-dark"
+              onClick={() => {
+                navigate('/contact');
+                scrollToTop();
+              }}
             >
               Partner as Company
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -100,6 +113,11 @@ const BecomePartner = () => {
           <a href="mailto:info@skillariondevelopment.in" className="flex items-center gap-2 hover:text-secondary transition-colors">
             <Mail className="h-4 w-4" />
             info@skillariondevelopment.in
+          </a>
+          <span className="hidden sm:block">|</span>
+          <a href="mailto:career@skillariondevelopment.in" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <Mail className="h-4 w-4" />
+            career@skillariondevelopment.in
           </a>
         </motion.div>
       </div>

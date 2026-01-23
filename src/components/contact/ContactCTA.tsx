@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Users, Building2, GraduationCap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const audiences = [
@@ -28,7 +29,10 @@ const audiences = [
 const ContactCTA = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+  const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <section className="py-20 md:py-28 bg-primary" ref={ref}>
       <div className="container">
@@ -67,13 +71,19 @@ const ContactCTA = () => {
               <p className="text-white/60 text-sm leading-relaxed mb-6">
                 {audience.description}
               </p>
+              
               <Button
                 variant="outline"
                 className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50"
+                onClick={() => {
+                  navigate('/contact');
+                  scrollToTop();
+                }}
               >
                 {audience.cta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+              
             </motion.div>
           ))}
         </div>

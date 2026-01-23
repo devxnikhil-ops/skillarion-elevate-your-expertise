@@ -102,7 +102,7 @@ const Curriculum = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <span className="text-white/50 text-sm hidden sm:block">{phase.duration}</span>
+                  
                   {expandedIndex === index ? (
                     <ChevronUp className="h-5 w-5 text-secondary" />
                   ) : (

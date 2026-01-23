@@ -88,7 +88,7 @@ const Contact = () => {
       <div className="container">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-1 h-8 bg-secondary rounded-full"></div>
-          <h2 className="text-2xl font-bold text-primary">Contact</h2>
+          <h2 className="text-2xl font-bold text-primary">Connect</h2>
         </div>
 
         <motion.div
@@ -129,7 +129,7 @@ const Contact = () => {
                   </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     TBI cubicle-6, TBI centre, CV Raman Engineering Block,
-                    Padmavathi Mahila University, SVU employee's colony,
+                    Near Padmavathi Mahila University, SVU employee's colony,
                     Tirupati-517502, Andhra Pradesh
                   </p>
                 </div>
@@ -169,12 +169,20 @@ const Contact = () => {
                   <h4 className="font-semibold text-primary mb-1">
                     Email Address
                   </h4>
+                  <div className="flex flex-col space-y-1">
                   <a
                     href="mailto:info@skillariondevelopment.in"
                     className="text-muted-foreground text-sm hover:text-secondary transition-colors"
                   >
                     info@skillariondevelopment.in
                   </a>
+                  <a
+                    href="mailto:career@skillariondevelopment.in"
+                    className="text-muted-foreground text-sm hover:text-secondary transition-colors"
+                  >
+                    career@skillariondevelopment.in
+                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -194,7 +202,7 @@ const Contact = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://www.instagram.com/skillarion_development_25"
+                  href="https://www.instagram.com/skillarion_development"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-lg flex items-center justify-center text-white hover:opacity-90 transition-opacity"
@@ -247,12 +255,13 @@ const Contact = () => {
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <Input
                     type="tel"
                     name="phone"
                     placeholder="+91 XXXXX XXXXX"
+                    required
                     className="bg-muted/50 border-border focus:border-secondary"
                   />
                 </div>

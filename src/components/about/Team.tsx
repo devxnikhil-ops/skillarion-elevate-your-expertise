@@ -47,7 +47,7 @@ const Team = () => {
             Meet Our Team
           </span>
           <h2 className="section-heading">
-            The People Behind <span className="text-secondary">SkillArion</span>
+            The People Behind Skill<span className="text-secondary">A</span>rion
           </h2>
           <p className="section-subheading mx-auto mt-4">
             A passionate team dedicated to transforming student careers and 

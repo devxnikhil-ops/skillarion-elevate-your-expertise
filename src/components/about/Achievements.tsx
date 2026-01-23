@@ -5,18 +5,19 @@ import { Trophy, Award, Star, Medal } from "lucide-react";
 
 const achievements = [
   {
-    icon: Trophy,
-    title: "AICTE Compliant",
-    description: "All programs meet AICTE standards for quality education and industry relevance.",
-  },
+  icon: Trophy,
+  title: "Industry-Aligned Standards",
+  description: "All programs are designed to meet high-quality education standards and current industry requirements.",
+}
+,
   {
     icon: Award,
     title: "TBI Incubated",
-    description: "Incubated at Technology Business Incubator, Padmavathi Mahila University.",
+    description: "Incubated at Technology Business Incubator, Near Padmavathi Mahila University.",
   },
   {
     icon: Star,
-    title: "75%+ Placement Rate",
+    title: "84%+ Placement Rate",
     description: "Consistently achieving high placement rates across all training programs.",
   },
   {

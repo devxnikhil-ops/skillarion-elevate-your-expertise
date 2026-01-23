@@ -19,7 +19,7 @@ const domains = [
   { icon: Stethoscope, name: "Healthcare", count: "10+" },
   { icon: ShoppingCart, name: "E-Commerce & Retail", count: "12+" },
   { icon: Banknote, name: "Banking & Finance", count: "8+" },
-  { icon: Plane, name: "Aerospace & Defense", count: "5+" },
+  { icon: Plane, name: "Aerospace", count: "5+" },
   { icon: Zap, name: "Energy & Utilities", count: "5+" },
 ];
 

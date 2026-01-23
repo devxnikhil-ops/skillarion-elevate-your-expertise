@@ -14,6 +14,9 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -23,13 +26,15 @@ const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" onClick={scrollToTop} className="flex items-center gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden">
                 <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">SkillArion</span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Development</span>
+                <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">
+                  Skill<span className="text-secondary">A</span>rion Development
+                </span>
+                <span className="text-xs text-muted-foreground hidden sm:block">Enhance Your Expertise</span>
               </div>
             </Link>
 
@@ -39,6 +44,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
+                  onClick={scrollToTop}
                   className="text-foreground font-medium gold-underline hover:text-primary transition-colors"
                 >
                   {link.name}
@@ -50,7 +56,10 @@ const Header = () => {
                 variant="default" 
                 size="lg" 
                 className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold"
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  navigate('/contact');
+                  scrollToTop();
+                }}
               >
                 Contact Us
               </Button>
@@ -83,7 +92,10 @@ const Header = () => {
                     key={link.name}
                     to={link.href}
                     className="text-foreground font-medium py-2 hover:text-secondary transition-colors"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     {link.name}
                   </Link>
@@ -93,6 +105,7 @@ const Header = () => {
                   className="bg-secondary text-secondary-foreground hover:bg-gold-dark mt-2 w-full"
                   onClick={() => {
                     navigate('/contact');
+                    scrollToTop();
                     setIsOpen(false);
                   }}
                 >

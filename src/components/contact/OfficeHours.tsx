@@ -8,8 +8,7 @@ const schedules = [
     icon: Clock,
     title: "Office Hours",
     details: [
-      { label: "Monday - Friday", value: "9:00 AM - 6:00 PM" },
-      { label: "Saturday", value: "10:00 AM - 4:00 PM" },
+      { label: "Monday - Saturday", value: "9:00 AM - 6:00 PM" },
       { label: "Sunday", value: "Closed" },
     ],
   },

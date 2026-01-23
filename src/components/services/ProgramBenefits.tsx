@@ -15,7 +15,7 @@ const benefits = [
   {
     icon: Wallet,
     title: "Paid Internships",
-    description: "Earn ₹16k–₹22.5k monthly stipend during your training period.",
+    description: "Earn ₹22k–₹25k monthly stipend during your training period.",
   },
   {
     icon: Home,
@@ -23,10 +23,10 @@ const benefits = [
     description: "Free or subsidized accommodation for outstation students.",
   },
   {
-    icon: FileCheck,
-    title: "AICTE Credits",
-    description: "Earn academic credits recognized by your institution.",
-  },
+  icon: FileCheck,
+  title: "Academic Credit Support",
+  description: "Get support for academic credits and program validation through your institution.",
+},
   {
     icon: GraduationCap,
     title: "Industry Certifications",
@@ -40,7 +40,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Placement Guarantee",
-    description: "75%+ placement rate with direct industry connections.",
+    description: "84%+ placement rate with direct industry connections.",
   },
 ];
 

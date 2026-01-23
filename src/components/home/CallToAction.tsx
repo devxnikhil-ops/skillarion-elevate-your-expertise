@@ -68,6 +68,11 @@ const CallToAction = () => {
               <Mail className="h-4 w-4" />
               info@skillariondevelopment.in
             </a>
+            <span className="hidden sm:block">|</span>
+            <a href="mailto:career@skillariondevelopment.in" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <Mail className="h-4 w-4" />
+              career@skillariondevelopment.in
+            </a>
           </div>
         </motion.div>
       </div>

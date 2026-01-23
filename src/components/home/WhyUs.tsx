@@ -6,8 +6,11 @@ import {
   Zap, 
   Users, 
   Trophy,
-  CheckCircle2
+  CheckCircle2,
+  Award,
+  GraduationCap
 } from "lucide-react";
+import { C } from "vitest/dist/chunks/reporters.d.BFLkQcL6.js";
 
 const reasons = [
   {
@@ -19,7 +22,7 @@ const reasons = [
   {
     icon: Zap,
     title: "Fast-Track to Employment",
-    description: "With 75%+ placement rate and direct industry connections, we accelerate your journey from student to professional.",
+    description: "With 84%+ placement rate and direct industry connections, we accelerate your journey from student to professional.",
     highlights: ["Direct placements", "Interview prep", "Resume building"],
   },
   {
@@ -31,9 +34,23 @@ const reasons = [
   {
     icon: Trophy,
     title: "Recognized Certifications",
-    description: "Earn AICTE-compliant certifications that are valued by employers and boost your professional credibility.",
-    highlights: ["AICTE approved", "Industry recognized", "Verified profiles"],
+    description: "Earn certifications that are valued by employers and boost your professional credibility.",
+    highlights: ["MSME, Startup India approved", "Industry recognized", "Verified profiles"],
   },
+  {
+    icon: Award,
+    title: "Advanced Certification Programs",
+    description: "Specialized courses across all engineering branches including CSE, Mechanical, EEE, ECE, and Civil covering emerging technologies to keep you ahead in the evolving tech landscape.",
+    highlights: ["Multi-domain programs", "Future-ready skills", "Industry-relevant tools"],
+  },
+  {
+  icon: GraduationCap,
+  title: "Scholarship Test for Partner Colleges",
+  description:
+    "Scholarship tests are conducted exclusively for students from colleges/institutions that have an active MoU with us, helping eligible students unlock fee benefits and learning opportunities.",
+  highlights: ["MoU colleges only", "Merit-based scholarships", "Exclusive student benefits"],
+},
+
 ];
 
 const WhyUs = () => {
@@ -53,7 +70,7 @@ const WhyUs = () => {
             Why Choose Us
           </span>
           <h2 className="section-heading">
-            Why <span className="text-secondary">SkillArion?</span>
+            Why Skill<span className="text-secondary">A</span>rion?
           </h2>
           <p className="section-subheading mx-auto mt-4">
             We don't just teach skills—we build careers. Here's what sets us apart 

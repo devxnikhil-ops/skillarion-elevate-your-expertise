@@ -4,8 +4,8 @@ import { useRef } from "react";
 
 const stats = [
   { value: "120+", label: "Industry Partners", description: "Global companies collaborating with us" },
-  { value: "500+", label: "Students Placed", description: "Total Students Placed" },
-  { value: "75%+", label: "Placement Rate", description: "Students placed in top companies" },
+  { value: "584+", label: "Students Placed", description: "Total Students Placed" },
+  { value: "84%+", label: "Placement Rate", description: "Students placed in top companies" },
   { value: "MSME", label: "Compliant", description: "Certified by MSME" },
   { value: "Startup India", label: "Compliant", description: "Recognized under Startup India" },
   { value: "DPIIT", label: "Certified", description: "CERTIFICATE NO:DIPP209373" },
@@ -30,7 +30,7 @@ const Stats = () => {
             Our Impact
           </span>
           <h2 className="section-heading">
-            SkillArion <span className="text-secondary">at a Glance</span>
+            Skill<span className="text-secondary">A</span>rion <span>at a Glance</span>
           </h2>
         </motion.div>
 

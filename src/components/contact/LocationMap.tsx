@@ -53,7 +53,7 @@ const LocationMap = () => {
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 max-w-md">
                   TBI cubicle-6, TBI centre, CV Raman Engineering Block,
-                  Padmavathi Mahila University, SVU employee's colony,
+                  Near Padmavathi Mahila University, SVU employee's colony,
                   Tirupati-517502, Andhra Pradesh
                 </p>
                 <Button

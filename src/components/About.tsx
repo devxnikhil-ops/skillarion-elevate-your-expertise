@@ -17,12 +17,12 @@ const features = [
   {
     icon: TrendingUp,
     title: "Career Advancement",
-    description: "Stipend-backed internships (₹16k–₹19k) with accommodation and placement support.",
+    description: "Stipend-backed internships (₹22k–₹25k) with accommodation and placement support.",
   },
   {
     icon: Award,
     title: "Recognized Certifications",
-    description: "AICTE-compliant programs with verified profiles shared across 120+ partner companies.",
+    description: "Programs with verified profiles shared across 120+ partner companies.",
   },
 ];
 
@@ -53,23 +53,21 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                SkillArion Development Pvt. Ltd. is an EdTech startup revolutionizing skill 
+                SkillArion Development is an EdTech company revolutionizing skill 
                 development for engineering and polytechnic students in India by bridging 
                 the academia-industry divide.
               </p>
               <p>
-                With partnerships across 120+ industries, we deliver hands-on technical 
-                workshops, internships, and training programs focused on emerging technologies 
-                like AI, quantum computing, and DevOps.
+                With partnerships across 120+ industries, we deliver hands-on workshops, internships, and training programs across all engineering branches, covering emerging technologies like AI/ML, IoT, Quantum Computing, Embedded Systems, VLSI, Robotics & Automation, BIM, Smart Cities.
               </p>
               <p>
-                Our AICTE-compliant initiatives provide live projects, MoUs, and placement 
-                support to make students job-ready, achieving 75%+ placement rates and 
+                Our initiatives provide live projects, MoUs, and placement 
+                support to make students job-ready, achieving 84%+ placement rates and 
                 elevating college NAAC/NIRF rankings.
               </p>
             </div>
 
-            {/* Mission Badge */}
+            {/* Mission Badge 
             <div className="mt-8 p-6 bg-primary rounded-xl text-white">
               <h3 className="font-display text-xl font-semibold mb-2 flex items-center gap-2">
                 <Target className="h-5 w-5 text-secondary" />
@@ -80,6 +78,7 @@ const About = () => {
                 fostering collaborations that turn academic potential into professional success.
               </p>
             </div>
+            */}
           </motion.div>
 
           {/* Right - Features Grid */}

@@ -10,20 +10,20 @@ const faqs = [
   },
   {
     question: "How much stipend will I receive during the internship?",
-    answer: "Students receive a monthly stipend ranging from ₹16,000 to ₹22,500 depending on the program and performance. Accommodation support is also provided for outstation students.",
+    answer: "Students receive a monthly stipend ranging from ₹22,000 to ₹25,000 depending on the program and performance. Accommodation support is also provided for outstation students.",
   },
   {
-    question: "Are the certifications recognized by AICTE?",
-    answer: "Yes, all our programs are AICTE-compliant and the certifications are recognized by educational institutions and industry partners across India.",
-  },
+  question: "Is SkillArion recognized by MSME and Startup India?",
+  answer: "Yes, SkillArion is recognized by MSME and Startup India, and our certifications are valued by both academic institutions and industry partners.",
+},
   {
     question: "What is the placement rate after completing the program?",
-    answer: "We maintain a 75%+ placement rate across all our programs. Our dedicated placement team works with 120+ industry partners to ensure maximum placement opportunities.",
+    answer: "We maintain a 84%+ placement rate across all our programs. Our dedicated placement team works with 120+ industry partners to ensure maximum placement opportunities.",
   },
-  {
-    question: "Can I join while still in college?",
-    answer: "Absolutely! Our programs are designed for final year and pre-final year students. We coordinate with your institution to ensure the internship aligns with your academic schedule.",
-  },
+ {
+  question: "Can I join while still in college?",
+  answer: "Absolutely! Our programs are designed for all engineering students from 1st year to final year. We coordinate with your institution to ensure the training or internship fits your academic schedule.",
+},
   {
     question: "Is there any fee for the training programs?",
     answer: "Program fees vary based on the course. However, the stipend you receive during internship often covers or exceeds the program cost. Contact us for detailed fee structure.",

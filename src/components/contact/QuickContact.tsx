@@ -21,8 +21,8 @@ const contactMethods = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "+91 7673925472",
-    link: "https://wa.me/917673925472",
+    value: "+91 9492270525",
+    link: "https://wa.me/919492270525",
     color: "bg-green-500",
   },
   {
@@ -35,8 +35,8 @@ const contactMethods = [
   {
     icon: Instagram,
     title: "Instagram",
-    value: "@skillarion_development_25",
-    link: "https://www.instagram.com/skillarion_development_25",
+    value: "@skillarion_development",
+    link: "https://www.instagram.com/skillarion_development",
     color: "bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400",
   },
 ];

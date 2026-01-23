@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 const eligibleFor = [
   "Engineering students (B.Tech/B.E.) in any branch",
   "Polytechnic/Diploma students",
-  "Final year and pre-final year students",
+  "All year engineering students (1st year to final year)",
   "Recent graduates seeking industry experience",
-  "Students looking for AICTE-compliant internships",
+  "Students with a passion for technology and learning",
 ];
 
 const requirements = [

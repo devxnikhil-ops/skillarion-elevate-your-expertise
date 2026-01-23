@@ -17,11 +17,11 @@ const services = [
     icon: Code2,
     title: "Technical Workshops",
     duration: "2–5 Days",
-    description: "Hands-on sessions on AI/ML, Automation & Robotics, Quantum Computing, and emerging technologies.",
+    description: "Hands-on sessions on AI/ML, VLSI, Quantum Computing, Embedded Systems, Automation & Robotics, and emerging technologies.",
     features: [
       "Industry-aligned curriculum",
       "Expert-led training",
-      "AICTE credits",
+      "Practical projects",
       "Certificates included",
     ],
     color: "from-blue-500/10 to-cyan-500/10",
@@ -33,10 +33,10 @@ const services = [
     duration: "16–24 Weeks",
     description: "Structured placements via 120+ industry partners with stipends and live project exposure.",
     features: [
-      "₹16k–₹19k stipends",
+      "₹22k–₹25k stipends",
       "Accommodation support",
       "Live projects",
-      "75%+ placement rate",
+      "84%+ placement rate",
     ],
     color: "from-secondary/10 to-amber-500/10",
     borderColor: "border-secondary/30 hover:border-secondary/50",
@@ -62,13 +62,30 @@ const services = [
     description: "Personalized certificates with verified profiles shared across 120+ industry partners.",
     features: [
       "Pre-endorsement access",
-      "₹16k–₹22.5k stipends",
+      "₹22k–₹25k stipends",
       "Direct industry approach",
       "Fast-track placements",
+      "Global Projects involvement",
     ],
     color: "from-purple-500/10 to-pink-500/10",
     borderColor: "border-purple-500/20 hover:border-purple-500/40",
   },
+  {
+  icon: Users,
+  title: "Parenting (Mentoring)",
+  duration: "Every Semester",
+  description:
+    "We visit MoU partner colleges each semester to evaluate student performance, identify strengths and gaps, understand interests, and create a personalized improvement plan with guided training.",
+  features: [
+    "Semester-wise student analysis",
+    "Interest & career mapping",
+    "Strength & gap identification",
+    "Personalized training roadmap",
+  ],
+  color: "from-rose-500/10 to-red-500/10",
+  borderColor: "border-rose-500/20 hover:border-rose-500/40",
+},
+
 ];
 
 const Services = () => {
@@ -93,7 +110,7 @@ const Services = () => {
             Our Programs
           </span>
           <h2 className="section-heading">
-            Skill Development <span className="text-secondary">Programs</span>
+            Skill <span className="text-secondary">A</span>rion Development Programs
           </h2>
           <p className="section-subheading mx-auto mt-4">
             Comprehensive training programs designed to bridge the gap between academic 
@@ -150,7 +167,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
               { label: "Placement Support", icon: "🎯" },
-              { label: "MoUs for Colleges", icon: "📜" },
+              { label: "MoUs for Colleges/Industries", icon: "📜" },
               { label: "Faculty Training", icon: "👨‍🏫" },
               { label: "Scholarship Tests", icon: "🏆" },
             ].map((item, index) => (

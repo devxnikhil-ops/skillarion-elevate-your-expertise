@@ -22,10 +22,10 @@ const benefits = [
     description: "Companies get pre-trained, job-ready candidates aligned with their technology stack.",
   },
   {
-    icon: Award,
-    title: "AICTE Compliance",
-    description: "All programs meet AICTE standards, ensuring quality and recognition.",
-  },
+  icon: Award,
+  title: "Quality-Assured Programs",
+  description: "All programs follow high education standards to ensure quality learning and industry relevance.",
+},
   {
     icon: FileCheck,
     title: "MoU Support",

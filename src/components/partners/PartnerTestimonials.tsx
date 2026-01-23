@@ -6,17 +6,17 @@ import { Quote, Building2 } from "lucide-react";
 const testimonials = [
   {
     quote: "SkillArion has been instrumental in providing us with well-trained interns who contribute from day one. Their industry-aligned curriculum ensures students are job-ready.",
-    company: "Tech Solutions Partner",
+    company: "Tech Solutions Partners",
     role: "HR Director",
   },
   {
     quote: "The MoU with SkillArion has significantly improved our placement statistics and NAAC rankings. Their professional approach makes collaboration seamless.",
-    company: "Engineering College Partner",
+    company: "Engineering College Partners",
     role: "Principal",
   },
   {
     quote: "We've hired multiple candidates through SkillArion's placement drives. The quality of talent and their technical skills are consistently impressive.",
-    company: "Manufacturing Industry Partner",
+    company: "Manufacturing Industry Partners",
     role: "Talent Acquisition Lead",
   },
 ];

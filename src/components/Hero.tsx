@@ -83,8 +83,8 @@ const Hero = () => {
           >
             {[
               { value: "120+", label: "Industry Partners" },
-              { value: "500+", label: "Students Placed" },
-              { value: "75%+", label: "Placement Rate" },
+              { value: "584+", label: "Students Placed" },
+              { value: "84%+", label: "Placement Rate" },
               { value: "₹25K+", label: "Internship Stipend" },
               { value: "2025", label: "Established" },
             ].map((stat, index) => (

@@ -18,8 +18,9 @@ const Footer = () => {
                 <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <span className="font-display font-bold text-xl text-white block leading-tight">SkillArion</span>
-                <span className="text-xs text-white/60">Development</span>
+                <span className="font-display font-bold text-xl text-white block leading-tight">
+                  Skill<span className="text-secondary">A</span>rion Development
+                </span>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -71,8 +72,10 @@ const Footer = () => {
                 "Technical Workshops",
                 "Industrial Training",
                 "Internship Programs",
-                "Certification Courses",
-                "Expert Sessions",
+                "Advanced Certification Courses",
+                "Entrepreneur Interaction",
+                "Industry Expert Sessions",
+                "Scholarship Tests",
               ].map((program) => (
                 <li key={program}>
                   <Link
@@ -94,7 +97,7 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-white/70">
-                  TBI Centre, Padmavathi Mahila University, Tirupati-517502, Andhra Pradesh
+                  TBI Centre, Near Padmavathi Mahila University, Tirupati-517502, Andhra Pradesh
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
@@ -107,6 +110,12 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
                 <a href="mailto:info@skillariondevelopment.in" className="text-white/70 hover:text-secondary transition-colors">
                   info@skillariondevelopment.in
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
+                <a href="mailto:career@skillariondevelopment.in" className="text-white/70 hover:text-secondary transition-colors">
+                  career@skillariondevelopment.in
                 </a>
               </li>
             </ul>
@@ -122,7 +131,7 @@ const Footer = () => {
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="https://www.instagram.com/skillarion_development_25"
+                href="https://www.instagram.com/skillarion_development"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
@@ -138,7 +147,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} SkillArion Development Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} SkillArion Development. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <a href="#" className="text-white/60 hover:text-secondary transition-colors">

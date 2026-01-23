@@ -5,15 +5,15 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Yugandhar Bandi",
     role: "Software Developer",
-    company: "Tech Solutions Ltd.",
+    company: "Quadrant Technologies",
     image: null,
     quote: "SkillArion's internship program transformed my career. The hands-on experience and mentorship helped me land my dream job within weeks of completing the program.",
     rating: 5,
   },
   {
-    name: "Rahul Verma",
+    name: "Venu Alluri",
     role: "Data Analyst",
     company: "Analytics Corp",
     image: null,
@@ -21,11 +21,35 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "Ananya Reddy",
-    role: "DevOps Engineer",
-    company: "Cloud Systems Inc.",
+    name: "Sudhakar",
+    role: "Civil Student",
+    company: "SV University",
     image: null,
-    quote: "From a polytechnic student to a DevOps engineer at a top company—SkillArion made it possible. Their placement support is unmatched.",
+    quote: "From a Civil Engineering student to working on BIM (Building Information Modeling) projects in a top company SkillArion made it possible. Their training and placement support are truly unmatched.",
+    rating: 5,
+  },
+  {
+    name: "Nithya Sree C V",
+    role: "EEE Student",
+    company: "Annamacharya Institute of Technology and Sciences",
+    image: null,
+    quote: "Being an EEE student, I always wanted to build a career in modern power technologies. SkillArion helped me gain strong hands-on skills in EV systems and smart grids, and their placement support gave me the confidence to land a great opportunity.",
+    rating: 5,
+  },
+  {
+    name: "Gana Yadav",
+    role: "ECE Student",
+    company: "Dr.SGIT",
+    image: null,
+    quote: "Being an EEE student, I always wanted to build a career in modern power technologies. SkillArion helped me gain strong hands-on skills in EV systems and smart grids, and their placement support gave me the confidence to land a great opportunity.",
+    rating: 5,
+  },
+  {
+    name: "Devendra E",
+    role: "Mechanical Student",
+    company: "KSRM Institute of Technology",
+    image: null,
+    quote: "Coming from Mechanical Engineering, I wanted a career that blends core concepts with future tech. SkillArion trained me in Robotics and Industrial Automation with practical projects, and their mentorship plus placement support helped me secure a great job opportunity.",
     rating: 5,
   },
 ];
