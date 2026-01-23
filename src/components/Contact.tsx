@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
+import {
+  MapPin,
+  Phone,
+  Mail,
   Send,
   Linkedin,
-  Instagram
+  Instagram,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -22,35 +21,65 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    if (formRef.current) {
-      emailjs.sendForm(
-        'YOUR_SERVICE_ID',      // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
-        formRef.current,
-        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS public key
-      )
-      .then(() => {
+
+    try {
+      if (!formRef.current) return;
+
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+      if (!accessKey) {
+        toast({
+          title: "Missing Access Key",
+          description: "Web3Forms access key is not configured in .env",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const formData = new FormData(formRef.current);
+
+      // Web3Forms expects access_key
+      formData.append("access_key", accessKey);
+
+      // Optional: email subject
+      formData.append("subject", "New Contact Form Submission");
+
+      // Optional: redirect not needed since we handle response
+      // formData.append("redirect", "https://yourdomain.com/thank-you");
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
         toast({
           title: "Message Sent!",
           description: "We'll get back to you within 24 hours.",
         });
-        formRef.current?.reset();
-      })
-      .catch((error) => {
-        console.error('EmailJS Error:', error);
+        formRef.current.reset();
+      } else {
+        console.error("Web3Forms Error:", data);
         toast({
           title: "Failed to send",
-          description: "Please try again or contact us directly.",
+          description: data.message || "Please try again later.",
           variant: "destructive",
         });
-      })
-      .finally(() => {
-        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error("Web3Forms Error:", error);
+      toast({
+        title: "Failed to send",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -61,6 +90,7 @@ const Contact = () => {
           <div className="w-1 h-8 bg-secondary rounded-full"></div>
           <h2 className="text-2xl font-bold text-primary">Contact</h2>
         </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -74,7 +104,7 @@ const Contact = () => {
             Let's Start a <span className="text-secondary">Conversation</span>
           </h2>
           <p className="section-subheading mx-auto mt-4">
-            Ready to enhance your students' career prospects? Contact us to explore 
+            Ready to enhance your students' career prospects? Contact us to explore
             partnership opportunities.
           </p>
         </motion.div>
@@ -94,10 +124,12 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Office Address</h4>
+                  <h4 className="font-semibold text-primary mb-1">
+                    Office Address
+                  </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    TBI cubicle-6, TBI centre, CV Raman Engineering Block, 
-                    Padmavathi Mahila University, SVU employee's colony, 
+                    TBI cubicle-6, TBI centre, CV Raman Engineering Block,
+                    Padmavathi Mahila University, SVU employee's colony,
                     Tirupati-517502, Andhra Pradesh
                   </p>
                 </div>
@@ -108,13 +140,21 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Phone Numbers</h4>
+                  <h4 className="font-semibold text-primary mb-1">
+                    Phone Numbers
+                  </h4>
                   <p className="text-muted-foreground text-sm">
-                    <a href="tel:+919492270525" className="hover:text-secondary transition-colors">
+                    <a
+                      href="tel:+919492270525"
+                      className="hover:text-secondary transition-colors"
+                    >
                       +91 9492270525
                     </a>
                     <br />
-                    <a href="tel:+917673925472" className="hover:text-secondary transition-colors">
+                    <a
+                      href="tel:+917673925472"
+                      className="hover:text-secondary transition-colors"
+                    >
                       +91 7673925472
                     </a>
                   </p>
@@ -126,9 +166,11 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Email Address</h4>
-                  <a 
-                    href="mailto:info@skillariondevelopment.in" 
+                  <h4 className="font-semibold text-primary mb-1">
+                    Email Address
+                  </h4>
+                  <a
+                    href="mailto:info@skillariondevelopment.in"
                     className="text-muted-foreground text-sm hover:text-secondary transition-colors"
                   >
                     info@skillariondevelopment.in
@@ -139,7 +181,9 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="pt-4">
-              <h4 className="font-semibold text-primary mb-4">Connect With Us</h4>
+              <h4 className="font-semibold text-primary mb-4">
+                Connect With Us
+              </h4>
               <div className="flex gap-4">
                 <a
                   href="https://www.linkedin.com/company/skillarion-development/"
@@ -168,7 +212,11 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <form ref={formRef} onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 shadow-soft border border-border">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="bg-background rounded-2xl p-8 shadow-soft border border-border"
+            >
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
