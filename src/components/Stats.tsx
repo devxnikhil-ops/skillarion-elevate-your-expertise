@@ -6,9 +6,11 @@ const stats = [
   { value: "120+", label: "Industry Partners", description: "Global companies collaborating with us" },
   { value: "500+", label: "Students Placed", description: "Total Students Placed" },
   { value: "75%+", label: "Placement Rate", description: "Students placed in top companies" },
+  { value: "MSME", label: "Compliant", description: "Certified by MSME" },
+  { value: "Startup India", label: "Compliant", description: "Recognized under Startup India" },
+  { value: "DPIIT", label: "Certified", description: "CERTIFICATE NO:DIPP209373" },
   { value: "₹25K+", label: "Internship Stipend", description: "Paid during internship programs" },
   { value: "16-24", label: "Weeks Training", description: "Comprehensive industrial exposure" },
-  { value: "AICTE", label: "Compliant", description: "All programs meet standards" },
 ];
 
 const Stats = () => {
@@ -32,7 +34,7 @@ const Stats = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
