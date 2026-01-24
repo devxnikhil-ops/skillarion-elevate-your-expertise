@@ -34,7 +34,7 @@ const Header = () => {
                 <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">
                   Skill<span className="text-secondary">A</span>rion Development
                 </span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Enhance Your Expertise</span>
+                <span className="text-xs text-muted-foreground hidden sm:block">Bridging Academia to Industry Excellence</span>
               </div>
             </Link>
 

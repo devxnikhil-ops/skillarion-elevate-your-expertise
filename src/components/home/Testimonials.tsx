@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "Venu Alluri",
     role: "Data Analyst",
-    company: "Analytics Corp",
+    company: "Pivox Labs",
     image: null,
     quote: "The industry-aligned curriculum and real projects gave me the confidence to excel in interviews. The stipend support during internship was a huge bonus!",
     rating: 5,
@@ -41,7 +41,7 @@ const testimonials = [
     role: "ECE Student",
     company: "Dr.SGIT",
     image: null,
-    quote: "Being an EEE student, I always wanted to build a career in modern power technologies. SkillArion helped me gain strong hands-on skills in EV systems and smart grids, and their placement support gave me the confidence to land a great opportunity.",
+    quote: "Being an ECE student, I wanted to build my career in core electronics, not just theory. SkillArion trained me in Embedded Systems and IoT with real-time projects, and their mentorship helped me gain the confidence to crack interviews and get a great opportunity.",
     rating: 5,
   },
   {

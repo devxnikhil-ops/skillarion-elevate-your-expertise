@@ -62,7 +62,7 @@ const Vision = () => {
               Our Goal
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              To train and place 9,547+ students by 2027, partner with 613+ 
+              To train and place 9,400+ students by 2027, partner with 613+ 
               industries, and establish SkillArion as the gold standard for 
               industry-academia collaboration in India.
             </p>

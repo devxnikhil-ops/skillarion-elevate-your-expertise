@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
+  Atom,
   Brain,
   Cpu,
   Cloud,
@@ -16,6 +17,17 @@ import {
 } from "lucide-react";
 
 const programs = [
+  // Quantum (First Priority)
+  {
+    icon: Atom,
+    title: "Quantum Technology",
+    duration: "8 Weeks",
+    description:
+      "Learn quantum computing fundamentals, quantum circuits, and Qiskit with hands-on simulations.",
+    color: "from-violet-500/20 to-indigo-500/20",
+    borderColor: "border-violet-500/30",
+  },
+
   // CSE / IT
   {
     icon: Brain,

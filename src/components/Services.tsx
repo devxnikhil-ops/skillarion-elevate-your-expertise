@@ -110,7 +110,7 @@ const Services = () => {
             Our Programs
           </span>
           <h2 className="section-heading">
-            Skill <span className="text-secondary">A</span>rion Development Programs
+            Skill<span className="text-secondary">A</span>rion Development Programs
           </h2>
           <p className="section-subheading mx-auto mt-4">
             Comprehensive training programs designed to bridge the gap between academic 

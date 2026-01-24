@@ -18,9 +18,12 @@ import {
   Wrench,
   Building2,
   Map,
+  Atom,
 } from "lucide-react";
-
 const technologies = [
+  // Quantum (First Priority)
+  { icon: Atom, name: "Quantum Technology", description: "Quantum Computing, Qiskit, Quantum Circuits" },
+
   // CSE / IT
   { icon: Brain, name: "AI & ML", description: "TensorFlow, PyTorch, Scikit-learn" },
   { icon: Cloud, name: "Cloud Computing", description: "AWS, Azure, GCP" },
@@ -48,6 +51,7 @@ const technologies = [
   { icon: Building2, name: "BIM & Smart Construction", description: "Planning, Modeling, Execution" },
   { icon: Map, name: "Smart Cities & Infrastructure", description: "Sustainability, Urban Tech, GIS" },
 ];
+
 
 const TechnologyStack = () => {
   const ref = useRef(null);

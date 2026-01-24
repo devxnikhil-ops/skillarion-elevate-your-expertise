@@ -8,7 +8,7 @@ const MOUComparison = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const withMou = [
-    "Scholarship test for students",
+    "Scholarship test for students every year",
     "Parenting (mentoring)",
     "MoU colleges get early updates on upcoming placement drives and hiring priority",
     "Advanced certification programs",
@@ -18,7 +18,7 @@ const MOUComparison = () => {
     "No scholarship test access",
     "Standard certification",
     "No parenting (mentoring)",
-    "No placement drive priority updates",
+    "Less drive priority updates",
   ];
 
   return (

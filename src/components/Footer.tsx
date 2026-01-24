@@ -28,7 +28,7 @@ const Footer = () => {
               students by bridging the academia-industry divide.
             </p>
             <p className="text-secondary font-semibold italic">
-              "Enhance Your Expertise"
+              "Bridging Academia to Industry Excellence"
             </p>
           </div>
 
