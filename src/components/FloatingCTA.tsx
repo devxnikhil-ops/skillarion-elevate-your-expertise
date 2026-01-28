@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Phone, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FloatingCTA = () => {
   return (
@@ -9,15 +10,15 @@ const FloatingCTA = () => {
       transition={{ duration: 0.5, delay: 1 }}
       className="floating-cta hidden md:flex"
     >
-      <a
-        href="/contact"
+      <Link
+        to="/contact"
         className="floating-cta-btn bg-secondary hover:bg-gold-dark"
       >
         <span className="flex items-center gap-2">
           <MessageCircle className="h-4 w-4" />
           Admission Enquiry
         </span>
-      </a>
+      </Link>
       <a
         href="tel:+919492270525"
         className="floating-cta-btn bg-primary hover:bg-navy-light"
