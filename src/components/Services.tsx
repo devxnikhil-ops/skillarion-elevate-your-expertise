@@ -157,6 +157,37 @@ const Services = () => {
           ))}
         </div>
 
+        {/* Mentor/Resource Person CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="mt-16 bg-gradient-to-br from-secondary/10 to-amber-500/10 rounded-2xl p-8 md:p-12 border-2 border-secondary/30"
+        >
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-gold">
+              <Users className="h-8 w-8 text-secondary-foreground" />
+            </div>
+            <h3 className="font-display text-3xl font-bold text-primary mb-4">
+              Become a Mentor or Resource Person?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Are you ready to make a difference? We are seeking passionate Professionals to become mentors and resource persons to inspire the next generation of leaders. Join our program to share your experience, expand your network and leave a lasting legacy. Apply now and help shape the future.
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-secondary text-secondary-foreground hover:bg-gold-dark shadow-gold text-base px-8 py-6"
+              onClick={() => {
+                // Navigate to contact page or open application form
+                window.location.href = '/contact';
+              }}
+            >
+              Apply Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </motion.div>
+
         {/* Additional Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

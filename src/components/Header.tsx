@@ -6,9 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Partners", href: "/partners" },
+  { name: "About", href: "/about" },
 ];
 
 const Header = () => {

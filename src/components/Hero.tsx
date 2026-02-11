@@ -86,7 +86,7 @@ const Hero = () => {
               { value: "584+", label: "Students Placed" },
               { value: "84%+", label: "Placement Rate" },
               { value: "₹25K+", label: "Internship Stipend" },
-              { value: "2025", label: "Established" },
+              { value: "87+", label: "Final Year Projects" },
             ].map((stat, index) => (
               <div key={index} className="text-center md:text-left">
                 <p className="text-3xl md:text-4xl font-display font-bold text-secondary">{stat.value}</p>

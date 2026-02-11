@@ -5,9 +5,9 @@ import { Calendar, MapPin, Users, Award } from "lucide-react";
 
 const milestones = [
   {
-    year: "2025",
-    title: "Founded",
-    description: "SkillArion was established with a vision to bridge the academia-industry gap.",
+    year: "87+",
+    title: "Final Year Projects",
+    description: "Successfully completed and delivered 87+ final year projects across various domains.",
   },
   {
     year: "Q1 2025",
