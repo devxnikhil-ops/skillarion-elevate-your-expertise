@@ -27,6 +27,9 @@ const Footer = () => {
               Revolutionizing skill development for engineering and polytechnic 
               students by bridging the academia-industry divide.
             </p>
+            <span className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/15 text-secondary text-xs font-semibold rounded-full mb-4">
+              AICTE Approved
+            </span>
             <p className="text-secondary font-semibold italic">
               "Bridging Academia to Industry Excellence"
             </p>
@@ -49,6 +52,11 @@ const Footer = () => {
               <li>
                 <Link onClick={scrollToTop} to="/services" className="text-white/70 hover:text-secondary transition-colors text-sm">
                   Services
+                </Link>
+              </li>
+              <li>
+                <Link onClick={scrollToTop} to="/courses" className="text-white/70 hover:text-secondary transition-colors text-sm">
+                  Courses
                 </Link>
               </li>
               <li>
@@ -110,12 +118,6 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
                 <a href="mailto:info@skillariondevelopment.in" className="text-white/70 hover:text-secondary transition-colors">
                   info@skillariondevelopment.in
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
-                <a href="mailto:career@skillariondevelopment.in" className="text-white/70 hover:text-secondary transition-colors">
-                  career@skillariondevelopment.in
                 </a>
               </li>
             </ul>

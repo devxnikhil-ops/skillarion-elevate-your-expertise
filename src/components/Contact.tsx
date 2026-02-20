@@ -176,12 +176,6 @@ const Contact = () => {
                   >
                     info@skillariondevelopment.in
                   </a>
-                  <a
-                    href="mailto:career@skillariondevelopment.in"
-                    className="text-muted-foreground text-sm hover:text-secondary transition-colors"
-                  >
-                    career@skillariondevelopment.in
-                  </a>
                   </div>
                 </div>
               </div>

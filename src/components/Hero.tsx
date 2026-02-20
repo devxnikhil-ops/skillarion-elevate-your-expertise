@@ -24,6 +24,10 @@ const Hero = () => {
         <div className="max-w-3xl">
           
 
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary/20 border border-secondary/40 rounded-full text-secondary text-sm font-semibold mb-5">
+            <span className="w-2 h-2 rounded-full bg-secondary"></span>
+            AICTE Approved
+          </div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

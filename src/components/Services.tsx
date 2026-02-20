@@ -113,7 +113,7 @@ const Services = () => {
             Skill<span className="text-secondary">A</span>rion Development Programs
           </h2>
           <p className="section-subheading mx-auto mt-4">
-            Comprehensive training programs designed to bridge the gap between academic 
+            Comprehensive, <span className="text-secondary font-semibold">AICTE-approved</span> training programs designed to bridge the gap between academic 
             knowledge and industry requirements.
           </p>
         </motion.div>
