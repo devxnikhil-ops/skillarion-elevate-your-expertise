@@ -10,8 +10,8 @@ const courses = [
     title: "AI & ML",
     duration: "4 Months",
     oldPrice: "₹44,999",
-    newPrice: "₹34,999",
-    discount: "₹10,000 Discount",
+    newPrice: "₹32,999",
+    discount: "₹12,000 Discount",
     description:
       "Build production-ready AI solutions with Python, neural networks, and real-world case studies.",
     highlights: ["15+ Live Projects", "100% Placement Support", "Industry Capstone"],
@@ -25,8 +25,8 @@ const courses = [
     title: "Python Full Stack",
     duration: "4 Months",
     oldPrice: "₹39,999",
-    newPrice: "₹29,999",
-    discount: "₹10,000 Discount",
+    newPrice: "₹31,999",
+    discount: "₹8,000 Discount",
     description:
       "Master backend APIs, responsive UI, and deployment with Django, React, and PostgreSQL.",
     highlights: ["Full Stack Toolkit", "Mock Interviews", "Client Workflows"],
@@ -40,8 +40,8 @@ const courses = [
     title: "Java Full Stack",
     duration: "4 Months",
     oldPrice: "₹39,999",
-    newPrice: "₹29,999",
-    discount: "₹10,000 Discount",
+    newPrice: "₹31,999",
+    discount: "₹8,000 Discount",
     description:
       "Become job-ready with Spring Boot, microservices, and scalable cloud-ready apps.",
     highlights: ["Enterprise Patterns", "System Design", "Cloud Deployment"],
@@ -55,8 +55,8 @@ const courses = [
     title: "Generative AI",
     duration: "2 Months",
     oldPrice: "₹29,999",
-    newPrice: "₹24,999",
-    discount: "₹5,000 Discount",
+    newPrice: "₹26,999",
+    discount: "₹3,000 Discount",
     description:
       "Ship LLM apps with prompt engineering, vector search, and GenAI deployment stacks.",
     highlights: ["LLM Integration", "RAG Pipelines", "Prompt Engineering"],
@@ -69,24 +69,16 @@ const courses = [
 
 const locationImages = [
   {
-    src: "/courses/WhatsApp Image 2026-02-20 at 14.37.41.jpeg",
-    alt: "Kodryx AI Hyderabad hallway",
-  },
-  {
     src: "/courses/WhatsApp Image 2026-02-20 at 14.37.46.jpeg",
-    alt: "Kodryx AI Hyderabad workspace",
+    alt: "Hyderabad workspace",
   },
   {
     src: "/courses/WhatsApp Image 2026-02-20 at 14.37.50.jpeg",
-    alt: "Kodryx AI Hyderabad conference table",
+    alt: "Hyderabad conference table",
   },
   {
     src: "/courses/WhatsApp Image 2026-02-20 at 14.37.56.jpeg",
-    alt: "Kodryx AI Hyderabad meeting room",
-  },
-  {
-    src: "/courses/WhatsApp Image 2026-02-20 at 14.38.03.jpeg",
-    alt: "Kodryx AI Hyderabad training space",
+    alt: "Hyderabad meeting room",
   },
 ];
 
@@ -109,16 +101,12 @@ const Courses = () => {
           className="text-center mb-16"
         >
           <div className="flex flex-wrap items-center justify-center gap-3 mb-5">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-              <BadgeCheck className="h-4 w-4" />
-              AICTE Approved
-            </span>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
               Corporate Training
             </span>
           </div>
           <h2 className="section-heading">
-            Courses in Collaboration with <span className="text-secondary">Kodryx AI</span>
+            Industry-Ready Courses for <span className="text-secondary">Career Growth</span>
           </h2>
           <p className="section-subheading mx-auto mt-4">
             Industry-ready programs designed for freshers and working professionals with
@@ -148,7 +136,7 @@ const Courses = () => {
       </div>
 
       <div className="container">
-        {/* Kodryx AI Corporate Training Location - Blurred Background Design */}
+        {/* Corporate Training Location - Blurred Background Design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -159,7 +147,7 @@ const Courses = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="/courses/WhatsApp Image 2026-02-20 at 14.37.50.jpeg" 
-              alt="Kodryx AI Background" 
+              alt="Hyderabad Training Center" 
               className="w-full h-full object-cover opacity-40 blur-md scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
@@ -173,31 +161,15 @@ const Courses = () => {
                 Corporate Training Center
               </div>
               
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center p-2 shadow-lg border border-white/20">
-                  <img src="/logo.png" alt="SkillArion" className="w-full h-full object-contain" />
-                </div>
-                <div className="text-white/40 text-2xl font-light">X</div>
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-amber-300">
-                  Kodryx AI
-                </h3>
-              </div>
-              
               <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                Corporate Training Collaboration
+                Corporate Training Center
               </h3>
               
               <p className="text-white/80 text-lg leading-relaxed mb-8">
-                Kodryx AI has collaborated for the corporate training. Experience immersive in-person sessions hosted at our state-of-the-art Hyderabad facility. Collaborate in modern workspaces guided by expert mentors.
+                Experience immersive in-person sessions hosted at our state-of-the-art Hyderabad facility. Collaborate in modern workspaces guided by expert mentors.
               </p>
               
               <div className="flex flex-col gap-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center border border-secondary/30">
-                    <BadgeCheck className="h-5 w-5 text-secondary" />
-                  </div>
-                  <span className="font-medium text-lg">AICTE Approved</span>
-                </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
                     <MapPin className="h-5 w-5 text-white" />
