@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -15,6 +15,7 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -27,30 +28,67 @@ const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" onClick={scrollToTop} className="flex items-center gap-3">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden">
-                <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
+            <div className="flex items-center gap-4">
+              <Link to="/" onClick={scrollToTop} className="flex items-center gap-3">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden">
+                  <img src="/logo.png" alt="SkillArion Logo" className="w-full h-full object-contain" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">
+                    Skill<span className="text-secondary">A</span>rion Development
+                  </span>
+                  <span className="text-xs text-muted-foreground hidden sm:block">Bridging Academia to Industry Excellence</span>
+                </div>
+              </Link>
+              <div className="hidden lg:flex items-center gap-4">
+                <div className="h-10 w-px bg-border/70" aria-hidden="true" />
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-[5px] uppercase tracking-[0.2em] text-muted-foreground">
+                    Approved by
+                  </span>
+                  <div className="flex items-center gap-4">
+                    <img
+                      src="/logos/AICTE.png"
+                      alt="AICTE"
+                      className="h-10 w-auto object-contain"
+                    />
+                    <img
+                      src="/logos/MSME.png"
+                      alt="MSME"
+                      className="h-10 w-auto object-contain"
+                    />
+                    <img
+                      src="/logos/DPIIT.webp"
+                      alt="DPIIT"
+                      className="h-10 w-auto object-contain"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-primary text-lg md:text-xl leading-tight">
-                  Skill<span className="text-secondary">A</span>rion Development
-                </span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Bridging Academia to Industry Excellence</span>
-              </div>
-            </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={scrollToTop}
-                  className="text-foreground font-medium gold-underline hover:text-primary transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={scrollToTop}
+                    className={`relative text-foreground font-medium transition-colors hover:text-primary ${
+                      isActive ? "text-primary" : ""
+                    }`}
+                  >
+                    {link.name}
+                    <span
+                      className={`absolute -bottom-2 left-0 h-0.5 bg-secondary transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
               {/* CTA Button */}
               <div className="hidden lg:block">
               <Button 

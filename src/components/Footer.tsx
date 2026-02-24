@@ -92,6 +92,15 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  onClick={scrollToTop}
+                  to="/courses"
+                  className="text-white/70 hover:text-secondary transition-colors text-sm"
+                >
+                  Corporate Training
+                </Link>
+              </li>
             </ul>
           </div>
 
