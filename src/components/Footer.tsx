@@ -24,7 +24,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Revolutionizing skill development for engineering and polytechnic 
+              Revolutionizing skill development for engineering and polytechnic
               students by bridging the academia-industry divide.
             </p>
             <p className="text-secondary font-semibold italic">
@@ -72,8 +72,18 @@ const Footer = () => {
           {/* Programs */}
           <div>
             <h4 className="font-display text-lg font-semibold mb-6">Programs</h4>
+            <li>
+              <Link
+                onClick={scrollToTop}
+                to="/courses"
+                className="text-white/70 hover:text-secondary transition-colors text-sm"
+              >
+                Corporate Training
+              </Link>
+            </li>
             <ul className="space-y-3">
               {[
+                " ",
                 "Technical Workshops",
                 "Industrial Training",
                 "Internship Programs",
@@ -92,15 +102,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  onClick={scrollToTop}
-                  to="/courses"
-                  className="text-white/70 hover:text-secondary transition-colors text-sm"
-                >
-                  Corporate Training
-                </Link>
-              </li>
             </ul>
           </div>
 
